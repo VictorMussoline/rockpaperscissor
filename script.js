@@ -2,6 +2,53 @@ var elementos = document.querySelectorAll('.player-options div > img');
 var playerOpt = "";
 var enemyOpt = "";
 
+function validateWin(){
+
+    let winner = document.querySelector('.winner');
+
+    if(playerOpt == "rock"){
+
+        if(enemyOpt == "rock"){
+            //Tied
+            winner.innerHTML = "The game tied!"
+        }else if(enemyOpt == "scissor"){
+            //Victory
+            winner.innerHTML = "You won the game!"
+        }else if(enemyOpt == "paper"){
+            //Defeat
+            winner.innerHTML = "You lost the game!"
+        }
+    }
+
+    if(playerOpt == "paper"){
+
+        if(enemyOpt == "paper"){
+            //Tied
+            winner.innerHTML = "The game tied!"
+        }else if(enemyOpt == "rock"){
+            //Victory
+            winner.innerHTML = "You won the game!"
+        }else if(enemyOpt == "scissor"){
+            //Defeat
+            winner.innerHTML = "You lost the game!"
+        }
+    }
+
+    if(playerOpt == "scissor"){
+
+        if(enemyOpt == "scissor"){
+            //Tied
+            winner.innerHTML = "The game tied!"
+        }else if(enemyOpt == "paper"){
+            //Victory
+            winner.innerHTML = "You won the game!"
+        }else if(enemyOpt == "rock"){
+            //Defeat
+            winner.innerHTML = "You lost the game!"
+        }
+    }
+}
+
 function resetEnemy(){
     const enemyOptions = document.querySelectorAll('.enemy-options div')
     for(var i = 0; i < enemyOptions.length; i++){
@@ -21,8 +68,7 @@ function enemyPlayer(){
         }
     }
 
-    alert(playerOpt)
-    alert(enemyOpt)
+    validateWin();
 
 }
 

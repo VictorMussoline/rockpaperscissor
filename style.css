@@ -4,8 +4,8 @@
     opacity: 0.3;
     cursor: pointer;
 }
-.player-options, .enemy-options{
-    width: 50%;
+.enemy-options{
+    margin-left: auto;
 }
 .align{
     display: flex;
