@@ -3,10 +3,9 @@ var playerOpt = "";
 var enemyOpt = "";
 
 function resetEnemy(){
+    const enemyOptions = document.querySelectorAll('.enemy-options div')
     for(var i = 0; i < enemyOptions.length; i++){
-
-        enemyOptions[i].childNodes[0].style.opacity = 0;
-
+        enemyOptions[i].childNodes[0].style.opacity = 0.3;
     }
 }
 
@@ -18,8 +17,13 @@ function enemyPlayer(){
     for(var i = 0; i < enemyOptions.length; i++){
         if(i == rand){
             enemyOptions[i].childNodes[0].style.opacity = 1;
+            enemyOpt = enemyOptions[i].childNodes[0].getAttribute('opt')
         }
     }
+
+    alert(playerOpt)
+    alert(enemyOpt)
+
 }
 
 function resetOpacityPlayer(){
